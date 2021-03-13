@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6d8c2e68-ce7c-4494-9609-8de5b1f2eb45" name="alaton">
+        <fileTransfer rootFolder="/var/www/h22351/data" accessType="SFTP" host="185.63.188.134" port="22" sshConfigId="470291ab-92e1-4f2e-bac3-6325422a27f9" sshConfig="h22351@185.63.188.134:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
