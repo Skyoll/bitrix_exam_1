@@ -20,11 +20,11 @@ foreach($arResult as $arItem):?>
 	<?if ($arItem["IS_PARENT"]):?>
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+			<li><a <?if ($arItem['PARAMS']['COLOR']):?><?=$arItem['PARAMS']['COLOR']?><?endif?> href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
 				<ul>
 					<?if ($arItem['PARAMS']['ADMIN_TEXT']):?><div class="menu-text"><?=$arItem['PARAMS']['ADMIN_TEXT']?></div><?endif?>
 		<?else:?>
-			<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+			<li><a <?if ($arItem['PARAMS']['COLOR']):?><?=$arItem['PARAMS']['COLOR']?><?endif?> href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
 				<ul>
 					<?if ($arItem['PARAMS']['ADMIN_TEXT']):?><div class="menu-text"><?=$arItem['PARAMS']['ADMIN_TEXT']?></div><?endif?>
 		<?endif?>
@@ -34,9 +34,9 @@ foreach($arResult as $arItem):?>
 		<?if ($arItem["PERMISSION"] > "D"):?>
 
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-				<li <?if ($arItem['PARAMS']['IMG'] == true):?>class="main-page"<?endif?>><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
+				<li <?if ($arItem['PARAMS']['IMG'] == true):?>class="main-page"<?endif?>><a <?if ($arItem['PARAMS']['COLOR']):?><?=$arItem['PARAMS']['COLOR']?><?endif?> href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
 			<?else:?>
-				<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
+				<li><a <?if ($arItem['PARAMS']['COLOR']):?><?=$arItem['PARAMS']['COLOR']?><?endif?> href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
 			<?endif?>
 
 		<?endif?>
