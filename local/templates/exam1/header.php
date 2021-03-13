@@ -107,13 +107,24 @@ endif;
                   <?php
 if($APPLICATION->GetCurPage() !== "/"):
                         ?>
-        <div class="breadcrumbs-box">
+                        <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb", 
+	"my_breadcrumb", 
+	array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => "my_breadcrumb"
+	),
+	false
+);?>
+<!--         <div class="breadcrumbs-box">
             <div class="inner-wrap">
                 <a href="">Главная</a>
                 <a href="">Мебель</a>
                 <span>Выставки и события</span>
             </div>
-        </div>
+        </div> -->
         <?endif;?>
         <!-- /breadcrumbs -->
         <div class="page">

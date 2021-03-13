@@ -1,17 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Мебельная компания");?><?$APPLICATION->IncludeComponent("bitrix:menu", "top", Array(
-	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-		"DELAY" => "N",	// Откладывать выполнение шаблона меню
-		"MAX_LEVEL" => "3",	// Уровень вложенности меню
-		"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-		"MENU_CACHE_TYPE" => "Y",	// Тип кеширования
-		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-		"COMPONENT_TEMPLATE" => "horizontal_multilevel"
+$APPLICATION->SetTitle("Мебельная компания");?><?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "my_breadcrumb", Array(
+	"PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+		"SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+		"START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
 	),
 	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
