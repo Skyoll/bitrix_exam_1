@@ -1,10 +1,17 @@
 <?
 $aMenuLinks = Array(
 	Array(
+		"Главная", 
+		"/", 
+		Array(), 
+		Array("IMG"=>"true"), 
+		"" 
+	),
+	Array(
 		"Компания", 
 		"company/", 
 		Array(), 
-		Array(), 
+		Array("ADMIN_TEXT"=>"это текст для пункта Комания"), 
 		"" 
 	),
 	Array(
