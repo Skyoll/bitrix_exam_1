@@ -22,7 +22,8 @@ $this->setFrameMode(true);
 	?>
 	<?if (isset($arItem["PREVIEW_PICTURE"]["SRC"]))
 {
-	$img = $arItem["PREVIEW_PICTURE"]["SRC"];
+	$arFile = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"]["ID"], ["width" => "68", height => "50"], BX_RESIZE_IMAGE_PROPORTIONAL, true);
+	$img = $arFile["src"];
 }
 ?>
 
